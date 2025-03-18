@@ -24,5 +24,7 @@ console.log(LowerCase1.toLowerCase())
 const LowerCase2 = "UndERneath";
 console.log(LowerCase2.toLowerCase())
 const titlecase = "A wonderful world";
-console.log()
+const result = titlecase.split(' ');
+const output = result.map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+console.log(output);
 
