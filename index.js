@@ -5,13 +5,16 @@ const food = 'The quick fox jumped over the lazy dog';
 const insertString = 'eat';
 console.log(fullString = food.slice(0,4) + insertString + ' ' + food.slice(4));
 
-const story = "The quick brown fox jumps over the lazy dog";
-const stringOne = 'the';
-const countOne = (story.match(new RegExp(stringOne, "g")) || []).length;
-console.log(countOne);
-const stringTwo = 'brown';
-const countTwo = (story.match(new RegExp(stringTwo, "g")) || []).length;
-console.log(countTwo);
+let story = "The quick brown fox jumps over the lazy dog";
+const words = story.toLowerCase().split(" ");
+let countIt = 0;
+let countBrownColour = 0;
+for (let word of words) {
+    if (word === "the") countIt++;
+    if (word === "brown") countBrownColour++;
+}
+console.log(`"the" appears: ${countIt} times`);
+console.log(`"brown" appears: ${countBrownColour} times`);
 
 const string1 = "The pupils are reading in the library";
 console.log(string1.search('are')); 
